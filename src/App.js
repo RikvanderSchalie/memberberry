@@ -1,22 +1,30 @@
 import React from 'react';
-import './App.css';
-
+import {BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
+import WelkomPage from "./pages/welcome";
+import HomePage from "./pages/home";
+import "./App.css";
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Memberberry
-        </a>
-      </header>
-    </div>
+      <Router>
+
+
+          <Switch>
+
+              <Route exact path="/">
+              <HomePage/>
+              </Route>
+
+              <Route path= "/welkom">
+              <WelkomPage/>
+              </Route>
+
+              </Switch>
+      </Router>
+
+
+
   );
 }
 
