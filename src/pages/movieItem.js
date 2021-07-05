@@ -1,8 +1,8 @@
 import React from 'react';
 import "./home.css";
-import { Link } from 'react-router-dom';
+/*import { Link } from 'react-router-dom';*/
 
-function HomePage ()
+function MovieItemPage ()
 
 {
     return(
@@ -10,11 +10,12 @@ function HomePage ()
             <header className="App-header">
                 <a className="App-link"
                 >
-                    memberBerry Home
+                    Movie item (card)
 
                 </a>
 
-                <p>click <Link to="/welkom">hier</Link> voor welkom</p>
+
+
             </header>
 
 
@@ -26,4 +27,4 @@ function HomePage ()
     );
 }
 
-export default HomePage ;
+export default MovieItemPage ;

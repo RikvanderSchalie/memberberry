@@ -2,7 +2,7 @@ import React from 'react';
 import "./home.css";
 import { Link } from 'react-router-dom';
 
-function HomePage ()
+function SignUpPage ()
 
 {
     return(
@@ -10,11 +10,12 @@ function HomePage ()
             <header className="App-header">
                 <a className="App-link"
                 >
-                    memberBerry Home
+                    SignUp
 
                 </a>
 
-                <p>click <Link to="/welkom">hier</Link> voor welkom</p>
+                <p><Link to="/Login">Login</Link></p>
+
             </header>
 
 
@@ -26,4 +27,4 @@ function HomePage ()
     );
 }
 
-export default HomePage ;
+export default SignUpPage ;
