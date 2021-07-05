@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
-
 import WelkomPage from "./pages/welcome";
 import HomePage from "./pages/home";
 import LoginPage from "./pages/login";
