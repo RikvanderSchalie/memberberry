@@ -1,5 +1,3 @@
-
-
 .grid-container{
     background-image: url("../images/vintage2.jpg");
     background-position: center;
@@ -8,6 +6,7 @@
     width: 0;
     height: 100vh;
     top: 0%;
+    left: -35%;
     left: 0%;
     right: 0;
     bottom: 0;
@@ -15,15 +14,18 @@
     min-width: 100%;
     min-height: 100%;
     display: grid;
-/*    gap: 10px;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-    grid-template-rows: 200px auto 40px;
-    grid-template-areas:
-            "leeg leeg leeg"
-            "leeg shape leeg"
-            "leeg leeg leeg";*/
+    /*    gap: 10px;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 200px auto 40px;
+        grid-template-areas:
+                "leeg leeg leeg"
+                "leeg shape leeg"
+                "leeg leeg leeg";*/
 }
 
+.shape{
+    overflow: visible;
+    position: absolute;
 #grid-item{
     grid-area: shape;
 }
@@ -33,13 +35,18 @@
     position: absolute;*/
     width: 375px;
     height: 550px;
-   /* left: 0px;
-    top: 222.333px;*/
+    left: 0px;
+    top: 222.333px;
+    /* left: 0px;
+     top: 222.333px;*/
     transform: matrix(1,0,0,1,0,0);
     background-color: rgba(197,219,217,1);
-/*    margin-bottom: 30px;
-    float: left;*/
-/*    margin-right: 20px;*/
+    margin-bottom: 30px;
+    float: left;
+    margin-right: 20px;
+    /*    margin-bottom: 30px;
+        float: left;*/
+    /*    margin-right: 20px;*/
     border-radius: 30px;
     opacity: 0.8;
 }
@@ -111,4 +118,5 @@
 .button:hover{
 
 }
+
 
