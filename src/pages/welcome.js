@@ -11,6 +11,9 @@ function WelkomPage ()
             <h1 className="titeltekst">Memberberry</h1>
             <h3 className="welcome">Welcome</h3>
             <h3 className="letsmake">Lets make some lists !</h3>
+            <p>
+                <button className="button"></button>
+            </p>s
         </shape>
     </div>
 
