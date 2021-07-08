@@ -11,22 +11,21 @@
     width: 375px;
     height: 550px;
     margin-top: 220px;
-    right: auto;
-    left: auto;
     background-color: rgba(197,219,217,1);
     border-radius: 30px;
     opacity: 0.8;
 }
 
+@media screen and (min-width:576px) {
+    .greenscreen{
+        margin-top: 400px;
+    }
+}
+
 .titeltekst{
-    text-align: center;
-    filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.259));
     left: 30px;
     top: 40px;
     position: absolute;
-    overflow: visible;
-    width: 250px;
-    white-space: nowrap;
     font-family: Bodoni MT;
     font-style: normal;
     font-weight: bold;
@@ -34,43 +33,34 @@
     color: rgba(19,25,67,0.957);
     text-decoration: underline;
     text-decoration-color: rgba(19,25,67,0.957);
-
-
+    filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.259));
 }
 
 .welcome{
-    filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.4));
+
     left: 110px;
-    top: 175px;
     top: 200px;
     position: absolute;
-    overflow: visible;
-    width: 165px;
-    white-space: nowrap;
     font-family: Century Gothic;
     font-style: normal;
     font-weight: normal;
     font-size: 29px;
     color: rgba(19,25,67,0.957);
-    text-transform: uppercase;
-
+    /*text-transform: uppercase;*/
+    filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.4));
 }
 
 .letsmake{
-    filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.302));
+
     left: 100px;
-    top: 325px;
     top: 350px;
     position: absolute;
-    overflow: visible;
-    width: 185px;
-    white-space: nowrap;
-    text-align: center;
     font-family: Century Gothic;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     color: rgba(19,25,67,0.957);
+    filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.302));
 }
 
 
