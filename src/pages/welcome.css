@@ -16,9 +16,15 @@
     opacity: 0.8;
 }
 
-@media screen and (min-width:576px) {
+@media screen and (min-width:376px) {
     .greenscreen{
-        margin-top: 400px;
+        position: fixed;
+        width: 550px;
+        height: 800px;
+        top: 50%;
+        left: 50%;
+        margin-top: -400px;
+        margin-left: -275px;
     }
 }
 
@@ -36,8 +42,16 @@
     filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.259));
 }
 
-.welcome{
+    @media screen and (min-width: 376px){
+        .titeltekst{
+            position: absolute;
+            top: 8%;
+            left: 9%;
+            font-size: 75px;
+        }
+    }
 
+.welcome{
     left: 110px;
     top: 200px;
     position: absolute;
@@ -49,6 +63,17 @@
     /*text-transform: uppercase;*/
     filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.4));
 }
+
+@media screen and (min-width: 376px){
+    .welcome{
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        font-size: 45px;
+    }
+}
+
+
 
 .letsmake{
 
@@ -63,6 +88,14 @@
     filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.302));
 }
 
+@media screen and (min-width: 376px){
+    .letsmake{
+        position: absolute;
+        top: 70%;
+        left: 27%;
+        font-size: 24px;
+    }
+}
 
 .button{
     left: 175px;
@@ -76,4 +109,12 @@
     transform: rotate(-45deg);
 }
 
+@media screen and (min-width: 376px){
+    .button{
+        position: absolute;
+        top: 85%;
+        left: 48%;
+        font-size: 15px;
+    }
+}
 
