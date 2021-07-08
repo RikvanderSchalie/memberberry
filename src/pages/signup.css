@@ -1,0 +1,94 @@
+
+.background1 {
+    background-image: url("../images/vintage5.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.greenscreen1{
+    position: fixed;
+    width: 375px;
+    height: 550px;
+    margin-top: 220px;
+    background-color: rgba(197,219,217,1);
+    border-radius: 30px;
+    opacity: 0.8;
+}
+
+@media screen and (min-width:376px) {
+    .greenscreen1{
+        position: fixed;
+        width: 550px;
+        height: 800px;
+        top: 50%;
+        left: 50%;
+        margin-top: -400px;
+        margin-left: -275px;
+    }
+}
+
+.titeltekst1{
+    left: 50%;
+    margin-left: -73px;
+    top: 10%;
+    position: absolute;
+    font-family: Bodoni MT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(19,25,67,0.957);
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgba(19,25,67,0.957);
+    filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.259));
+}
+
+@media screen and (min-width: 376px){
+    .titeltekst1{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        margin-left: -102px;
+        font-size: 70px;
+    }
+}
+
+.member1{
+    left: 50%;
+    margin-left: -91px;
+    top: 30%;
+    position: absolute;
+    font-family: Century Gothic;
+    color: rgba(19,25,67,0.957);
+    filter: drop-shadow(0px 3px 6px rgba(19, 25, 67, 0.302));
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+
+}
+
+@media screen and (min-width: 376px){
+    .member1{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-left: -128.5px;
+        font-size: 25px;
+    }
+}
+
+.signup{
+    left: 10%;
+    margin-left: -5px;
+    top: 60%;
+    position: absolute;
+    width: 300px;
+    height: 25px;
+    font-family: Century Gothic;
+    /*color: rgba(19,25,67,0.957);*/
+    border-radius: 10px;
+    border-color: gray;
+
+
+}

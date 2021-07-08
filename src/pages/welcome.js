@@ -5,7 +5,7 @@ function WelkomPage ()
 
 {
     return(
-        <div className="test">
+        <div className="background">
 
             <div className="greenscreen">
                 <h1 className="titeltekst">Memberberry</h1>
