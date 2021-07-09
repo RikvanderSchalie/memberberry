@@ -1,0 +1,25 @@
+.buttonsgn{
+    left: 40%;
+    top: 87%;
+    position: absolute;
+    border : solid rgba(19,25,67,0.957);
+    background-color: rgba(197,219,217,1);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(-45deg);
+    font-family: Century Gothic;
+    font-size: medium;
+    font-weight: inherit;
+}
+
+@media screen and (min-width: 376px){
+    .buttonsgn{
+        position: absolute;
+        top: 88%;
+        left: 44%;
+        padding: 10px;
+
+    }
+}
+

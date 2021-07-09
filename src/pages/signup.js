@@ -1,6 +1,7 @@
 import React from 'react';
 import "./signup.css";
 import { Link } from 'react-router-dom';
+import Buttonsign from "../components/Buttonsign";
 
 
 function SignUpPage ()
@@ -37,6 +38,8 @@ function SignUpPage ()
                        placeholder="  &#128272;   Repeat password"
                    />
                </label>
+
+               <Buttonsign></Buttonsign>
 
            </div>
 
