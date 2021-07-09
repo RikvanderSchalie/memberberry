@@ -1,0 +1,28 @@
+.passwordcomp{
+    left: 6.5%;
+    margin-left: -5px;
+    top: 59%;
+    position: absolute;
+    width: 300px;
+    height: 28px;
+    font-family: Century Gothic;
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: rgba(19,25,67,0.957) !important;
+    border-width: 1px!important;
+    /*&#129488; &#128272; (unicode lock en smiley*/
+}
+
+@media screen and (min-width: 376px){
+    .passwordcomp{
+        position: absolute;
+        width: 400px;
+        height: 40px;
+        top: 59%;
+        left: 34%;
+        margin-left: -128.5px;
+        font-size: 25px;
+        border-radius: 10px;
+        border-color: rgba(19,25,67,0.957) !important;
+    }
+}

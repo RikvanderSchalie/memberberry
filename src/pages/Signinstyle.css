@@ -1,12 +1,12 @@
 
-.background1 {
+.background2 {
     background-image: url("../images/vintage5.jpg");
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
 
-.greenscreen1{
+.greenscreen2{
     position: fixed;
     width: 375px;
     height: 550px;
@@ -17,7 +17,7 @@
 }
 
 @media screen and (min-width:376px) {
-    .greenscreen1{
+    .greenscreen2{
         position: fixed;
         width: 550px;
         height: 800px;
@@ -28,7 +28,7 @@
     }
 }
 
-.titeltekst1{
+.titeltekst2{
     left: 50%;
     margin-left: -73px;
     top: 10%;
@@ -45,7 +45,7 @@
 }
 
 @media screen and (min-width: 376px){
-    .titeltekst1{
+    .titeltekst2{
         position: absolute;
         top: 10%;
         left: 50%;
@@ -54,9 +54,9 @@
     }
 }
 
-.member1{
+.member2{
     left: 50%;
-    margin-left: -91px;
+    margin-left: -125px;
     top: 30%;
     position: absolute;
     font-family: Century Gothic;
@@ -69,16 +69,16 @@
 }
 
 @media screen and (min-width: 376px){
-    .member1{
+    .member2{
         position: absolute;
         top: 30%;
         left: 50%;
-        margin-left: -128.5px;
+        margin-left: -175px;
         font-size: 25px;
     }
 }
 
-.signup1{
+.signup2{
     left: 6.5%;
     margin-left: -5px;
     top: 50%;
@@ -95,7 +95,7 @@
 }
 
 @media screen and (min-width: 376px){
-    .signup1{
+    .signup2{
         position: absolute;
         width: 400px;
         height: 40px;
@@ -107,5 +107,3 @@
         border-color: rgba(19,25,67,0.957) !important;
     }
 }
-
-

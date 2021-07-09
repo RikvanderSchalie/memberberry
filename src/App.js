@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 import WelkomPage from "./pages/welcome";
 import HomePage from "./pages/home";
-import LoginPage from "./pages/login";
+import SigninPage from "./pages/Signin";
 import SignUpPage from "./pages/signup";
 import MovieItemPage from "./pages/movieItem";
 import ListPage from "./pages/list";
@@ -12,7 +12,6 @@ import "./App.css";
 function App() {
   return (
       <Router>
-
 
           <Switch>
 
@@ -24,8 +23,8 @@ function App() {
               <WelkomPage/>
               </Route>
 
-              <Route path= "/login">
-                  <LoginPage/>
+              <Route path= "/Signin">
+                  <SigninPage/>
               </Route>
 
               <Route path= "/signup">
@@ -39,8 +38,6 @@ function App() {
               <Route path= "/list">
                   <ListPage/>
               </Route>
-
-
 
           </Switch>
       </Router>
