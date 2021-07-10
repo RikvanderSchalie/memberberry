@@ -1,6 +1,7 @@
 import React from 'react';
 import "./welcome.css";
 import foto from "../images/vintage2.jpg";
+import {Link} from "react-router-dom";
 function WelkomPage ()
 
 {
@@ -12,7 +13,8 @@ function WelkomPage ()
                 <h3 className="welcome">Welcome</h3>
                 <h3 className="letsmake">Lets make some lists !</h3>
                 <p>
-                    <button className="button" onClick={() => console.log ("BOEMM!!") }></button>
+                    {/*<button  className="button" onClick={() => console.log ("BOEMM!!") }></button>*/}
+                    <Link className="button" to="/signup"></Link>
                 </p>
             </div>
         </div>

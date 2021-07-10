@@ -7,7 +7,7 @@ function Buttonsign(){
         <button
             className="buttonsgn"
             /*onClick={() => console.log ("BOEMM!!") }*/
-        >Go !</button>
+        >Go ! </button>
     )
 }
 
