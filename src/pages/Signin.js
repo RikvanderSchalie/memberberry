@@ -36,5 +36,5 @@ function SigninPage ()
 
 export default SigninPage ;
 
-                {/*<p><Link to="/signup">Sign-up</Link></p>*/}
+
 

@@ -16,11 +16,7 @@ function App() {
           <Switch>
 
               <Route exact path="/">
-              <HomePage/>
-              </Route>
-
-              <Route path= "/welkom">
-              <WelkomPage/>
+                  <WelkomPage/>
               </Route>
 
               <Route path= "/Signin">
@@ -29,6 +25,10 @@ function App() {
 
               <Route path= "/signup">
                   <SignUpPage/>
+              </Route>
+
+              <Route path= "/home">
+                  <HomePage/>
               </Route>
 
               <Route path= "/movieItem">
