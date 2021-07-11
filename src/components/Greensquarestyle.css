@@ -1,0 +1,25 @@
+
+.greensquare{
+/*    left: 50%;
+    margin-left: -125px;*/
+    top: 30%;
+    position: absolute;
+    width: 375px;
+    height: 600px;
+    margin-top: 1%;
+    background-color: rgba(197,219,217,1);
+    border-radius: 30px;
+    opacity: 0.8;
+}
+
+@media screen and (min-width:376px) {
+    .greensquare{
+        position: fixed;
+        width: 550px;
+        height: 800px;
+        top: 50%;
+        left: 50%;
+        margin-top: -400px;
+        margin-left: -275px;
+    }
+}

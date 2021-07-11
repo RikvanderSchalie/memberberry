@@ -1,5 +1,7 @@
 import React from 'react';
-import "./Signinstyle.css";
+import "./home.css";
+import Greensquare from "../components/Greensquare"
+
 import { Link } from 'react-router-dom';
 
 /*components*/
@@ -14,16 +16,22 @@ function SigninPage ()
 
 {
     return(
-        <div className="background2">
-            <div className="greenscreen2">
-                <h1 className="titeltekst2">sign in</h1>
-                <h3 className="member2">not a member ? <Link to="/Signup">let's sign up</Link></h3>
-                <Inputemail></Inputemail>
-                <Inputpassw></Inputpassw>
-
-                <Buttonsign></Buttonsign>
-
+        <div className="backgroundhome">
+            {/*<div className="greenscreenhome">
+                <h1 className="titelteksthome">sign in</h1>
+                <h3 className="memberhome">not a member ? <Link to="/Signup">let's sign up</Link></h3>
             </div>
+            <Inputemail></Inputemail>
+            <Inputpassw></Inputpassw>*/}
+            <Greensquare></Greensquare>
+
+            <label htmlFor="search" className="search">
+                <input
+                    type="email"
+                    className="search"
+                    placeholder=" &#128269;  Search "
+                />
+            </label>
 
 
 
