@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import { useEffect, useState } from "react";
 import "./home.css";
 import Greensquare from "../components/Greensquare"
 import Navibar from "../components/Navibar";
@@ -13,19 +15,57 @@ import Inputpassrep from "../components/Inputpassrep";
 
 
 
-function SigninPage ()
+function HomePage () {
+    const [movies, setMovies] = useState([]);
+    console.log("WHAT IS THE STATE:", movies);
 
-{
+    useEffect(() => {
+        console.log("ON MOUNT:");
+        async function fetchMovies() {
+            const response = await axios.get(
+                "http://www.omdbapi.com/?s=love&apikey=94c16227"
+            );
+            console.log(response.data.Search);
+            setMovies(response.data.Search); // trigger rerender
+        }
+
+        fetchMovies();
+    }, []);
+
+    // 1. "WHAT IS THE STATE:" null
+    // 2. "ON MOUNT:"
+    // ... even wachtten
+    // 3. console.log([{}, {}, {}]); -> de data
+    // 4. console.log("WHAT IS THE STATE:", [{}, {}, {}]);
+
+
     return(
         <div className="backgroundhome">
-            {/*<div className="greenscreenhome">
-                <h1 className="titelteksthome">sign in</h1>
-                <h3 className="memberhome">not a member ? <Link to="/Signup">let's sign up</Link></h3>
-            </div>
-            <Inputemail></Inputemail>
-            <Inputpassw></Inputpassw>*/}
+
             <Greensquare></Greensquare>
-            {/*<Navibar></Navibar>*/}
+
+                <header className="movie">
+                    MOVIES:
+                    <div>
+                        {movies ? (
+                            movies.map((movie) => {
+                                console.log(movie);
+                                return (
+                                    <div key={movie.imdbID}>
+                                        <h1>{movie.Title}</h1>
+                                        <img src={movie.Poster} alt={""} />
+                                    </div>
+                                );
+                            })
+                        ) : (
+                            <h1>Loading</h1>
+                        )}
+                        {/* we zien objecten -> we zien alle films */}
+                    </div>
+                </header>
+
+
+
 
 
             <label htmlFor="search" className="search">
@@ -36,8 +76,6 @@ function SigninPage ()
                 />
             </label>
 
-
-
         </div>
 
 
@@ -45,7 +83,7 @@ function SigninPage ()
     );
 }
 
-export default SigninPage ;
+export default HomePage ;
 
 
 
