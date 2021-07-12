@@ -13,39 +13,106 @@
 
 @media screen and (min-width:376px) {
     .navibar{
-        top: 74%;
+        top: 73%;
         left: 50%;
         margin-left: -275px;
         position: fixed;
         width: 550px;
-        height: 62px;
+        height: 75px;
         background-color: white;
         border-radius: 10px;
         opacity:1;
     }
 }
 
+
 .navbuthome{
-    top: 0%;
+    top: 4%;
+    left: 2%;
     position: absolute;
     width: 15%;
-    height: 62px;
-    border : solid rgba(19,25,67,0.957);
-    background-color: rgba(197,219,217,1);
-    display: inline-block;
+    height: 55px;
+    border-width: 0px;
+
+/*    border : solid rgba(19,25,67,0.957);
+    background-color: rgba(197,219,217,1);*/
+/*    display: inline-block;
     font-family: Century Gothic;
     font-size: medium;
-    font-weight: inherit;
+    font-weight: inherit;*/
+    background-image: url("../images/home-256x256-433833.png");
+    background-position: center;
+    background-size: cover;
+
 }
 
 @media screen and (min-width: 376px){
     .navbuthome{
-        top: 74%;
-        left: 50%;
+        top: 73.5%;
+        left: 52%;
         margin-left: -275px;
         position: fixed;
         width: 75px;
-        height: 62px;
+        height: 60px;
         padding: 10px;
+        background-image: url("../images/home-256x256-433833.png");
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+.navbutlist{
+    top: 4%;
+    left: 43%;
+    position: absolute;
+    width: 15%;
+    height: 55px;
+    border-width: 0px;
+    background-image: url("../images/list-256x256-433838.png");
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (min-width: 376px){
+    .navbutlist{
+        top: 73.5%;
+        left: 75.5%;
+        margin-left: -275px;
+        position: fixed;
+        width: 75px;
+        height: 60px;
+        padding: 10px;
+        background-image: url("../images/list-256x256-433838.png");
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.navbutset{
+    top: 4%;
+    left: 83%;
+    position: absolute;
+    width: 15%;
+    height: 55px;
+    border : 0px;
+    background-image: url("../images/settings-256x256-433865.png");
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (min-width: 376px){
+    .navbutset{
+        top: 73.5%;
+        left: 98%;
+        margin-left: -275px;
+        position: fixed;
+        width: 75px;
+        height: 60px;
+        padding: 10px;
+        border : 0px;
+        background-image: url("../images/settings-256x256-433865.png");
+        background-position: center;
+        background-size: cover;
     }
 }
