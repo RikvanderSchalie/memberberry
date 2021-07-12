@@ -25,7 +25,7 @@ function SigninPage ()
             <Inputemail></Inputemail>
             <Inputpassw></Inputpassw>*/}
             <Greensquare></Greensquare>
-            <Navibar></Navibar>
+            {/*<Navibar></Navibar>*/}
 
 
             <label htmlFor="search" className="search">

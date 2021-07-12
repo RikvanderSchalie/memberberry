@@ -2,10 +2,11 @@
 .greensquare{
 /*    left: 50%;
     margin-left: -125px;*/
-    top: 30%;
+    top: 22%;
     position: absolute;
     width: 375px;
-    height: 550px;
+    height: 575px;
+
 
     background-color: rgba(197,219,217,1);
     border-radius: 30px;

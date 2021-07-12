@@ -9,8 +9,6 @@ function navibar(){
     return (
 
         <div className="navibar">
-
-
             <button
                 className="navbuthome"
                 /*&#127968;*/
@@ -19,12 +17,12 @@ function navibar(){
             <button
                 className="navbutlist"
                 /*&#128195;*/
-            >&#128195;</button>
+            ></button>
 
             <button
                 className="navbutset"
                 /*&#9881;*/
-            >Go</button>
+            ></button>
 
         </div>
     )

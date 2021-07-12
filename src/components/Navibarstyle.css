@@ -32,8 +32,6 @@
     position: absolute;
     width: 15%;
     height: 55px;
-    border-width: 0px;
-
 /*    border : solid rgba(19,25,67,0.957);
     background-color: rgba(197,219,217,1);*/
 /*    display: inline-block;
@@ -49,12 +47,10 @@
 @media screen and (min-width: 376px){
     .navbuthome{
         top: 73.5%;
-        left: 52%;
-        margin-left: -275px;
+        left: 25%;
         position: fixed;
         width: 75px;
         height: 60px;
-        padding: 10px;
         background-image: url("../images/home-256x256-433833.png");
         background-position: center;
         background-size: cover;
