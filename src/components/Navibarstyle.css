@@ -2,11 +2,10 @@
 .navibar{
     /*    left: 50%;
         margin-left: -125px;*/
-    top: 94%;
+    top: 93.5%;
     position: absolute;
     width: 100%;
-    height: 55px;
-    margin-top: 1%;
+    height: 62px;
     background-color: white;
     border-radius: 10px;
     opacity:1;
@@ -14,12 +13,39 @@
 
 @media screen and (min-width:376px) {
     .navibar{
+        top: 74%;
+        left: 50%;
+        margin-left: -275px;
         position: fixed;
         width: 550px;
-        height: 800px;
-        top: 50%;
+        height: 62px;
+        background-color: white;
+        border-radius: 10px;
+        opacity:1;
+    }
+}
+
+.navbuthome{
+    top: 0%;
+    position: absolute;
+    width: 15%;
+    height: 62px;
+    border : solid rgba(19,25,67,0.957);
+    background-color: rgba(197,219,217,1);
+    display: inline-block;
+    font-family: Century Gothic;
+    font-size: medium;
+    font-weight: inherit;
+}
+
+@media screen and (min-width: 376px){
+    .navbuthome{
+        top: 74%;
         left: 50%;
-        margin-top: -400px;
         margin-left: -275px;
+        position: fixed;
+        width: 75px;
+        height: 62px;
+        padding: 10px;
     }
 }
