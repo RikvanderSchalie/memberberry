@@ -43,15 +43,14 @@ function HomePage () {
         <div className="backgroundhome">
 
             <Greensquare></Greensquare>
-
-                <header className="movie">
-                    MOVIES:
+            
                     <div>
                         {movies ? (
                             movies.map((movie) => {
                                 console.log(movie);
                                 return (
-                                    <div key={movie.imdbID}>
+                                    <div key={movie.imdbID}
+                                         className="movie" >
                                         <h1>{movie.Title}</h1>
                                         <img src={movie.Poster} alt={""} />
                                     </div>
@@ -62,7 +61,9 @@ function HomePage () {
                         )}
                         {/* we zien objecten -> we zien alle films */}
                     </div>
-                </header>
+
+
+
 
 
 
