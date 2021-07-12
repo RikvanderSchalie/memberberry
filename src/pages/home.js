@@ -1,6 +1,7 @@
 import React from 'react';
 import "./home.css";
 import Greensquare from "../components/Greensquare"
+import Navibar from "../components/Navibar";
 
 import { Link } from 'react-router-dom';
 
@@ -24,6 +25,8 @@ function SigninPage ()
             <Inputemail></Inputemail>
             <Inputpassw></Inputpassw>*/}
             <Greensquare></Greensquare>
+            <Navibar></Navibar>
+
 
             <label htmlFor="search" className="search">
                 <input
