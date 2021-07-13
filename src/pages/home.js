@@ -19,11 +19,19 @@ function HomePage () {
     const [movies, setMovies] = useState([]);
     console.log("WHAT IS THE STATE:", movies);
 
+/*  const searchbar = document.getElementById('searchbar')
+    searchbar.addEventListener('keyup',(e) =>{
+
+        console.log(e.target.value);
+    });*/
+
+
     useEffect(() => {
         console.log("ON MOUNT:");
         async function fetchMovies() {
             const response = await axios.get(
-                "http://www.omdbapi.com/?s=love&apikey=94c16227"
+                /*"http://www.omdbapi.com/?s=${searchValue}&apikey=94c16227"*/
+                "http://www.omdbapi.com/?s=party&apikey=94c16227"
             );
             console.log(response.data.Search);
             setMovies(response.data.Search); // trigger rerender
@@ -41,18 +49,19 @@ function HomePage () {
 
     return(
     <>
-
             <input
-                type="email"
+                id="searchbar"
+                type="text"
                 className="search"
                 placeholder=" &#128269;  Search "
-            />
 
+            />
 
 
         <div className="backgroundhome">
 
-           {/* <Greensquare></Greensquare>*/}
+
+
         <span className="movie" >
                     <div>
                         {movies ? (
