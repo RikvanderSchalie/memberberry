@@ -19,19 +19,20 @@ function HomePage () {
     const [movies, setMovies] = useState([]);
     console.log("WHAT IS THE STATE:", movies);
 
-/*  const searchbar = document.getElementById('searchbar')
-    searchbar.addEventListener('keyup',(e) =>{
+    window.onload = function(){
+  const searchbar = document.getElementById('searchbar')
+    searchbar.addEventListener('keyup',(e) => {
 
-        console.log(e.target.value);
-    });*/
-
+        return(e.target.value);
+    });
+}
 
     useEffect(() => {
         console.log("ON MOUNT:");
         async function fetchMovies() {
             const response = await axios.get(
                 /*"http://www.omdbapi.com/?s=${searchValue}&apikey=94c16227"*/
-                "http://www.omdbapi.com/?s=party&apikey=94c16227"
+                'http://www.omdbapi.com/?s=fun&apikey=94c16227'
             );
             console.log(response.data.Search);
             setMovies(response.data.Search); // trigger rerender
@@ -54,7 +55,6 @@ function HomePage () {
                 type="text"
                 className="search"
                 placeholder=" &#128269;  Search "
-
             />
 
 
@@ -72,6 +72,7 @@ function HomePage () {
                                          className="moviecard" >
                                         <h1 className="moviecardH1">{movie.Title}</h1>
                                         <img src={movie.Poster} alt={""} />
+
                                     </div>
                                 );
                             })
