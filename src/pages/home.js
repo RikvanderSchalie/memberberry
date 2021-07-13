@@ -40,18 +40,28 @@ function HomePage () {
 
 
     return(
+    <>
+
+            <input
+                type="email"
+                className="search"
+                placeholder=" &#128269;  Search "
+            />
+
+
+
         <div className="backgroundhome">
 
-            <Greensquare></Greensquare>
-            
+           {/* <Greensquare></Greensquare>*/}
+        <span className="movie" >
                     <div>
                         {movies ? (
                             movies.map((movie) => {
                                 console.log(movie);
                                 return (
                                     <div key={movie.imdbID}
-                                         className="movie" >
-                                        <h1>{movie.Title}</h1>
+                                         className="moviecard" >
+                                        <h1 className="moviecardH1">{movie.Title}</h1>
                                         <img src={movie.Poster} alt={""} />
                                     </div>
                                 );
@@ -61,25 +71,12 @@ function HomePage () {
                         )}
                         {/* we zien objecten -> we zien alle films */}
                     </div>
+        </span>
 
-
-
-
-
-
-
-
-            <label htmlFor="search" className="search">
-                <input
-                    type="email"
-                    className="search"
-                    placeholder=" &#128269;  Search "
-                />
-            </label>
 
         </div>
 
-
+    </>
 
     );
 }
