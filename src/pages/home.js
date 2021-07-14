@@ -6,11 +6,7 @@ import Greensquare from "../components/Greensquare"
 
 import { Link } from 'react-router-dom';
 
-/*components*/
-import Buttonsign from "../components/Buttonsign";
-import Inputemail from "../components/Inputemail";
-import Inputpassw from "../components/Inputpassw";
-import Inputpassrep from "../components/Inputpassrep";
+
 
 
 
@@ -26,8 +22,7 @@ function HomePage () {
     });
 }
 
-    /* When the user clicks on the button,
-    toggle between hiding and showing the dropdown content */
+    /* dropdownfunctie*/
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show")
     }
@@ -60,11 +55,7 @@ function HomePage () {
         fetchMovies();
     }, []);
 
-    // 1. "WHAT IS THE STATE:" null
-    // 2. "ON MOUNT:"
-    // ... even wachtten
-    // 3. console.log([{}, {}, {}]); -> de data
-    // 4. console.log("WHAT IS THE STATE:", [{}, {}, {}]);
+
 
     return(
     <>
@@ -75,9 +66,9 @@ function HomePage () {
         <div className="dropdown1">
             <button onClick= {myFunction} className="dropbtn"></button>
             <div id="myDropdown" className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="#">Lists</a>
+                <a href="#">Settings</a>
+                <a href="#">Log-in</a>
             </div>
         </div>
 
@@ -109,7 +100,7 @@ function HomePage () {
                         ) : (
                             <h1>Loading</h1>
                         )}
-                        {/* we zien objecten -> we zien alle films */}
+
                     </div>
         </span>
 
