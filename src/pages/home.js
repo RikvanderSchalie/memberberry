@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import "./home.css";
 import Greensquare from "../components/Greensquare"
-import Navibar from "../components/Navibar";
 
 import { Link } from 'react-router-dom';
 
@@ -50,6 +49,9 @@ function HomePage () {
 
     return(
     <>
+
+            <button className="buttonhome"></button>
+
             <input
                 id="searchbar"
                 type="text"
@@ -63,16 +65,18 @@ function HomePage () {
 
 
         <span className="movie" >
-                    <div>
+                    <div className="moviecard1" >
                         {movies ? (
                             movies.map((movie) => {
                                 console.log(movie);
                                 return (
                                     <div key={movie.imdbID}
-                                         className="moviecard" >
+                                         className="moviecard">
                                         <h1 className="moviecardH1">{movie.Title}</h1>
+                                        <button className="buttonmoviecard"
+                                                onClick={() => console.log ("BOEMM!!") }
+                                        >+List</button>
                                         <img src={movie.Poster} alt={""} />
-
                                     </div>
                                 );
                             })

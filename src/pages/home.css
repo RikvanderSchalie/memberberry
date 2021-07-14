@@ -34,9 +34,6 @@
     width: 300px;
     height: 28px;
     font-family: Century Gothic;
-    font-size: 20px;
-    border-radius: 10px;
-    border-color: rgba(19,25,67,0.957) !important;
     border-width: 1px!important;
 
     /*border-color: rgba(19,25,67,0.957) !important;*/
@@ -72,26 +69,65 @@
 
 
 
-
 }
 
 .moviecard {
-    /*background-color: ;*/
+
     display: flex;
     flex-direction: column;
     /*align-items: center;*/
     /*justify-content: center;*/
     font-size: 15px;
     width: 150px;
+
 }
 
 .moviecardH1 {
     /*background-color: ;*/
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
-    /*justify-content: center;*/
+/*    align-items: center;
+    justify-content: center;*/
     font-size: calc(15px );
-    color: white;
+    font-family: Century Gothic;
+    color: rgba(19,25,67,0.957);
     width: 150px;
+}
+
+.moviecard1{
+    background-color: rgba(197,219,217,1);
+    /*opacity: 0.8;*/
+    border-radius: 15px;
+    width: 70%;
+    padding: 10px;
+}
+
+.buttonmoviecard{
+
+    position: absolute;
+    left: 65%;
+    margin-top: 15%;
+    transform: rotate(-45deg);
+    padding: 5px;
+    border : solid rgba(19,25,67,0.957);
+    border-width: 0 3px 3px 0;
+    background-color: transparent;
+    font-family: Century Gothic;
+    font-size: medium;
+    font-weight: inherit;
+}
+
+.buttonhome{
+
+    position: fixed;
+    left: 8%;
+    margin-top: 8%;
+    transform: rotate(135deg);
+    padding: 7px;
+    border : solid white;
+    border-width: 0 3px 3px 0;
+    background-color: transparent;
+    font-family: Century Gothic;
+    font-size: medium;
+    font-weight: inherit;
 }
