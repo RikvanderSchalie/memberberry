@@ -26,6 +26,26 @@ function HomePage () {
     });
 }
 
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show")
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+    }
+    }
+    }
+    }
+
     useEffect(() => {
         console.log("ON MOUNT:");
         async function fetchMovies() {
@@ -46,11 +66,20 @@ function HomePage () {
     // 3. console.log([{}, {}, {}]); -> de data
     // 4. console.log("WHAT IS THE STATE:", [{}, {}, {}]);
 
-
     return(
     <>
-
             <button className="buttonhome"></button>
+
+
+
+        <div className="dropdown1">
+            <button onClick= {myFunction} className="dropbtn"></button>
+            <div id="myDropdown" className="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
 
             <input
                 id="searchbar"
@@ -59,10 +88,7 @@ function HomePage () {
                 placeholder=" &#128269;  Search "
             />
 
-
         <div className="backgroundhome">
-
-
 
         <span className="movie" >
                     <div className="moviecard1" >
