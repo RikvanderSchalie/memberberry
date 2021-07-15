@@ -1,31 +1,77 @@
 
-/*components*/
-import Buttonsign from "../components/Buttonsign";
-import Inputemail from "../components/Inputemail";
-import Inputpassw from "../components/Inputpassw";
-import Inputpassrep from "../components/Inputpassrep";
-
 import React from 'react';
-import {useState} from 'react'
-import "./Signinstyle.css";
+import "./signup.css";
 import { Link } from 'react-router-dom';
+import {useState} from 'react'
+import firebase from "firebase";
+import app from '../components/Firebase';
+/*components*/
 
-function SigninPage ()
-{
-/*// state management
+
+function SigninPage (){
+
+// state management
     const [action, setAction] = useState('login')
-    console.log ( 'current action state is :', action)*/
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
+// Handle submit
+    async function onSubmit(e){
+
+// Prevent page reload
+        e.preventDefault()
+
+//registratie met try catch
+
+        try {
+
+            if( action === 'login') {
+                const userCredential = await app.auth().signInWithEmailAndPassword(email, password)
+                console.log('logged in', userCredential)
+            }
+            if ( action == 'register'){
+                const userCredential = await app.auth().createUserWithEmailAndPassword(email, password)
+                console.log('registered', userCredential)
+            }
+        }    catch (e) {
+            console.error( 'firebase fail :', e)
+        }
+    }
 // return het visuele component
     return(
-        <div className="background2">
-            <div className="greenscreen2">
-                <h1 className="titeltekst2">sign in</h1>
-                <h3 className="member2">not a member ? <Link to="/Signup">let's sign up</Link></h3>
-                <Inputemail></Inputemail>
-                <Inputpassw></Inputpassw>
+        <div className="background1">
+            <div className="greenscreen1">
+                <h1 className="titeltekst1">sign in</h1>
+                <h3 className="member1">Member ? <Link to="/Signup">let's sign up</Link></h3>
 
-                <Buttonsign></Buttonsign>
+                <form onSubmit={onSubmit}>
+                    <input
+                        onChange={e => setEmail (e.target.value)}
+                        value={ email }
+                        type="email"
+                        name='email'
+                        className="signupcomp"
+                        placeholder="  &#128232;   Email"
+                    />
+
+                    <input
+                        onChange={e => setPassword (e.target.value)}
+                        value={ password }
+                        type="password"
+                        name='password'
+                        className="passwordcomp"
+                        placeholder="  &#128272;   Password"
+                    />
+
+                    <button
+                        className="buttonsgn"
+                        type='submit' value={action}
+                    >Go !</button>
+
+                </form>
+
+                {/*               <Inputpassw></Inputpassw>
+               <Buttonsign></Buttonsign>*/}
 
             </div>
 

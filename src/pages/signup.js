@@ -1,16 +1,19 @@
 import React from 'react';
-import "./signup.css";
 import { Link } from 'react-router-dom';
 import {useState} from 'react'
 import firebase from "firebase";
 import app from '../components/Firebase';
 /*components*/
+import "./signup.css";
+import "../components/Buttonsignstyle.css"
+import "../components/Inputmailstyle.css"
+import "../components/inputpassstyle.css"
 
 
 function SignUpPage (){
 
 // state management
-const [action, setAction] = useState('login')
+const [action, setAction] = useState('register')
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 
