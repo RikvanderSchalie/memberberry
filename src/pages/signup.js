@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import firebase from "firebase";
 import app from '../components/Firebase';
 /*components*/
@@ -16,6 +16,17 @@ function SignUpPage (){
 const [action, setAction] = useState('register')
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
+const [user, setUser] = useState()
+
+
+// listener voor de user state
+useEffect(f => {
+    app.auth().onAuthStateChanged( user => {
+        console.log('user changed to', user)
+        setUser(user)
+    } )
+}, [])
+
 
 // Handle submit
  async function onSubmit(e){

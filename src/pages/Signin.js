@@ -3,6 +3,7 @@ import React from 'react';
 import "./signup.css";
 import { Link } from 'react-router-dom';
 import {useState} from 'react'
+import {useHistory} from "react-router-dom";
 import firebase from "firebase";
 import app from '../components/Firebase';
 /*components*/
@@ -14,6 +15,8 @@ function SigninPage (){
     const [action, setAction] = useState('login')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [user, setUser] = useState()
+    const history = useHistory();
 
 // Handle submit
     async function onSubmit(e){
@@ -28,10 +31,13 @@ function SigninPage (){
             if( action === 'login') {
                 const userCredential = await app.auth().signInWithEmailAndPassword(email, password)
                 console.log('logged in', userCredential)
+                setUser(userCredential.user)
+                history.push("/home");
             }
             if ( action == 'register'){
                 const userCredential = await app.auth().createUserWithEmailAndPassword(email, password)
                 console.log('registered', userCredential)
+                setUser(userCredential.user)
             }
         }    catch (e) {
             console.error( 'firebase fail :', e)
@@ -74,12 +80,7 @@ function SigninPage (){
                <Buttonsign></Buttonsign>*/}
 
             </div>
-
-
-
         </div>
-
-
 
     );
 }
