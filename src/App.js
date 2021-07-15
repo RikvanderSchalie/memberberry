@@ -7,6 +7,9 @@ import SignUpPage from "./pages/signup";
 import MovieItemPage from "./pages/movieItem";
 import ListPage from "./pages/list";
 import "./App.css";
+import firebase from "firebase";
+
+
 
 
 function App() {
