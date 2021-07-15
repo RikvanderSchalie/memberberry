@@ -10,7 +10,7 @@ import app from '../components/Firebase';
 function SignUpPage (){
 
 // state management
-const [action, setAction] = useState('register')
+const [action, setAction] = useState('login')
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 
@@ -19,17 +19,19 @@ const [password, setPassword] = useState('')
 
 // Prevent page reload
     e.preventDefault()
-    console.log ({email, password} )
 
 //registratie met try catch
 
 try {
 
-    if( action == 'login') return
-
+    if( action === 'login') {
+        const userCredential = await app.auth().signInWithEmailAndPassword(email, password)
+     console.log('logged in', userCredential)
+    }
+    if ( action == 'register'){
     const userCredential = await app.auth().createUserWithEmailAndPassword(email, password)
-    console.log(userCredential)
-
+    console.log('registered', userCredential)
+    }
 }    catch (e) {
     console.error( 'firebase fail :', e)
 }
